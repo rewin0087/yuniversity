@@ -8,7 +8,7 @@ Data source: webometrics.info
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'yYUniversity'
+gem 'yuniversity'
 ```
 
 And then execute:
@@ -17,7 +17,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install YUniversity
+    $ gem install yuniversity
 
 ## Usage
 
