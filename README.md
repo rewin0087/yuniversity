@@ -22,9 +22,13 @@ Or install it yourself as:
 ## Usage
 
   University::ALL
+
   University::COUNTRIES
+
   University::COUNTRY_NAMES
+
   University::NAMES
+
   University::RAW - for raw data
 
 ## Contributing
