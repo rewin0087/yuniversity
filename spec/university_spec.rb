@@ -26,6 +26,13 @@ describe University do
     expect(University::COUNTRIES).not_to be_nil
     expect(University::COUNTRIES).to be_a Array
     expect(University::COUNTRIES).not_to be_empty
+    expect(University::COUNTRIES.size).to eql(196)
+  end
+
+  it '::COUNTRY_NAMES' do
+    expect(University::COUNTRIES).not_to be_nil
+    expect(University::COUNTRIES).to be_a Array
+    expect(University::COUNTRIES).not_to be_empty
     expect(University::COUNTRIES).to include('Botswana')
     expect(University::COUNTRIES).to include('Burkina Faso')
     expect(University::COUNTRIES).to include('Japan')

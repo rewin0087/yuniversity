@@ -6,7 +6,9 @@ module University
 
   ALL = RAW.map{|c| c['schools']}.flatten
 
-  COUNTRIES = RAW.map{|c| c['name']}.flatten
+  COUNTRIES = RAW.map{|c| {name: c['name'], code: c['iso_code']}}.flatten
+
+  COUNTRY_NAMES = RAW.map{|c| c['name']}.flatten
 
   NAMES = ALL.map{|u| u['name']}
 
