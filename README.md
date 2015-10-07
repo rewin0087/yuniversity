@@ -21,15 +21,15 @@ Or install it yourself as:
 
 ## Usage
 
-  University::ALL
+    University::ALL
 
-  University::COUNTRIES
+    University::COUNTRIES
 
-  University::COUNTRY_NAMES
+    University::COUNTRY_NAMES
 
-  University::NAMES
+    University::NAMES
 
-  University::RAW - for raw data
+    University::RAW - for raw data
 
 ## Contributing
 
