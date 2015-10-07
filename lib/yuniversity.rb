@@ -1,8 +1,8 @@
-require "university/version"
+require "yuniversity/version"
 require 'yaml'
 
-module University
-  RAW = YAML.load_file(File.join(File.dirname(__FILE__), 'university', 'data', 'universities.yml'))
+module YUniversity
+  RAW = YAML.load_file(File.join(File.dirname(__FILE__), 'YUniversity', 'data', 'universities.yml'))
 
   ALL = RAW.map{|c| c['schools']}.flatten
 

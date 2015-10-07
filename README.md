@@ -1,14 +1,14 @@
-# University
+# YUniversity
 
 List of Worldwide universities.
-source: data webometrics.info
+Data source: webometrics.info
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'university'
+gem 'yYUniversity'
 ```
 
 And then execute:
@@ -17,19 +17,19 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install university
+    $ gem install YUniversity
 
 ## Usage
 
-    University::ALL
+    YUniversity::ALL
 
-    University::COUNTRIES
+    YUniversity::COUNTRIES
 
-    University::COUNTRY_NAMES
+    YUniversity::COUNTRY_NAMES
 
-    University::NAMES
+    YUniversity::NAMES
 
-    University::RAW - for raw data
+    YUniversity::RAW - for raw data
 
 ## Contributing
 
