@@ -1,6 +1,6 @@
 require "yuniversity/version"
 require 'yaml'
-
+require 'pry'
 module YUniversity
   RAW = YAML.load_file(File.join(File.dirname(__FILE__), 'YUniversity', 'data', 'universities.yml'))
 
@@ -12,7 +12,11 @@ module YUniversity
 
   NAMES = ALL.map{|u| u['name']}
 
-  def self.by_country(country)
+  def self.find_by_country(country)
     ALL.select{|c| c['country'].downcase.match(country.downcase)}
+  end
+
+  def self.find_by_countries(countries)
+    ALL.select{|c| countries.map{|e| e.downcase }.include?(c['country'].downcase)}
   end
 end

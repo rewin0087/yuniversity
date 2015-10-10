@@ -46,29 +46,44 @@ describe YUniversity do
     expect(YUniversity::NAMES.size).to eql(16773)
   end
 
-  context '#by_country' do
+  context '#find_by_country' do
     it 'PH' do
-      expect(YUniversity.by_country('PH')).not_to be_nil
-      expect(YUniversity.by_country('PH')).not_to be_empty
-      expect(YUniversity.by_country('PH').size).to eql(274)
+      expect(YUniversity.find_by_country('PH')).not_to be_nil
+      expect(YUniversity.find_by_country('PH')).not_to be_empty
+      expect(YUniversity.find_by_country('PH').size).to eql(274)
     end
 
     it 'JaPan' do
-      expect(YUniversity.by_country('JaPan')).not_to be_nil
-      expect(YUniversity.by_country('JaPan')).not_to be_empty
-      expect(YUniversity.by_country('JaPan').size).to eql(722)
+      expect(YUniversity.find_by_country('JaPan')).not_to be_nil
+      expect(YUniversity.find_by_country('JaPan')).not_to be_empty
+      expect(YUniversity.find_by_country('JaPan').size).to eql(722)
     end
 
     it 'china' do
-      expect(YUniversity.by_country('china')).not_to be_nil
-      expect(YUniversity.by_country('china')).not_to be_empty
-      expect(YUniversity.by_country('china').size).to eql(1300)
+      expect(YUniversity.find_by_country('china')).not_to be_nil
+      expect(YUniversity.find_by_country('china')).not_to be_empty
+      expect(YUniversity.find_by_country('china').size).to eql(1300)
     end
 
     it 'Test' do
-      expect(YUniversity.by_country('Test')).not_to be_nil
-      expect(YUniversity.by_country('Test')).to be_empty
-      expect(YUniversity.by_country('Test').size).to eql(0)
+      expect(YUniversity.find_by_country('Test')).not_to be_nil
+      expect(YUniversity.find_by_country('Test')).to be_empty
+      expect(YUniversity.find_by_country('Test').size).to eql(0)
+    end
+  end
+
+  context '#find_by_countries' do
+    let(:countries) { ['japan', 'korea', 'philippines'] }
+
+    it '[japan, korea, philippines]' do
+      expect(YUniversity.find_by_countries(countries)).not_to be_nil
+      expect(YUniversity.find_by_countries(countries)).not_to be_empty
+      expect(YUniversity.find_by_countries(countries).size).to eql(996)
+    end
+
+    it '[] empty' do
+      expect(YUniversity.find_by_countries([])).not_to be_nil
+      expect(YUniversity.find_by_countries([])).to be_empty
     end
   end
 end
