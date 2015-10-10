@@ -19,4 +19,9 @@ module YUniversity
   def self.find_by_countries(countries)
     ALL.select{|c| countries.map{|e| e.downcase }.include?(c['country'].downcase)}
   end
+
+  def self.find_country_by_university(university)
+    university = ALL.find{|c| c['name'].downcase.match(university.downcase)}
+    university['country'] unless university.nil?
+  end
 end

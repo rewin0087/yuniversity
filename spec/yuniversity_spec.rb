@@ -86,4 +86,16 @@ describe YUniversity do
       expect(YUniversity.find_by_countries([])).to be_empty
     end
   end
+
+  context '#find_country_by_university' do
+    it 'when university is existing - University Ufo Dental' do
+      expect(YUniversity.find_country_by_university('University Ufo Dental')).not_to be_nil
+      expect(YUniversity.find_country_by_university('University Ufo Dental')).not_to be_empty
+      expect(YUniversity.find_country_by_university('University Ufo Dental')).to eql('Albania')
+    end
+
+    it 'when university is not existing University test' do
+      expect(YUniversity.find_country_by_university('University test')).to be_nil
+    end
+  end
 end
