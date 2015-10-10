@@ -1,6 +1,6 @@
 require "yuniversity/version"
 require 'yaml'
-require 'pry'
+
 module YUniversity
   RAW = YAML.load_file(File.join(File.dirname(__FILE__), 'YUniversity', 'data', 'universities.yml'))
 
