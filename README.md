@@ -30,8 +30,12 @@ Or install it yourself as:
     YUniversity::NAMES
 
     YUniversity::RAW - for raw data
-    
-    YUniversity.by_country('philippines') - this will return all the schools from philippines.
+
+    YUniversity.find_by_country('philippines') - this will return all the schools from philippines.
+
+    YUniversity.find_by_countries(['philippines', 'japan', 'korea']) - this will return all the schools from japan and korea
+
+    YUniversity.find_country_by_university('New York University Tirana') - this will return the country for New York University Tirana
 
 ## Contributing
 
