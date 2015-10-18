@@ -2,7 +2,7 @@ require "yuniversity/version"
 require 'yaml'
 
 module YUniversity
-  RAW = YAML.load_file(File.join(File.dirname(__FILE__), 'YUniversity', 'data', 'universities.yml'))
+  RAW = YAML.load_file(File.join(File.dirname(__FILE__), 'yuniversity', 'data', 'universities.yml'))
 
   ALL = RAW.map{|c| c['schools']}.flatten
 
