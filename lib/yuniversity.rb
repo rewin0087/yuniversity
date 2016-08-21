@@ -1,5 +1,6 @@
 require "yuniversity/version"
 require 'json'
+require 'countries'
 
 module YUniversity
   RAW = JSON.parse(File.read(File.join(File.dirname(__FILE__), 'yuniversity', 'data', 'universities.json')))

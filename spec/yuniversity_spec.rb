@@ -10,13 +10,13 @@ describe YUniversity do
     expect(YUniversity::RAW).not_to be_nil
     expect(YUniversity::RAW).to be_a Array
     expect(YUniversity::RAW).not_to be_empty
-    expect(YUniversity::RAW.size).to eql(196)
+    expect(YUniversity::RAW.size).to eql(15592)
   end
 
   it '::ALL' do
     expect(YUniversity::ALL).not_to be_nil
     expect(YUniversity::ALL).to be_a Array
     expect(YUniversity::ALL).not_to be_empty
-    expect(YUniversity::ALL.size).to eql(16773)
+    expect(YUniversity::ALL.size).to eql(15592)
   end
 end
